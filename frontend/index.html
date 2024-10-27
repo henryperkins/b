@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/auth.css">
+</head>
+<body>
+    <div id="app">
+        <div id="auth-container" class="auth-container">
+            <div id="auth-forms"></div>
+        </div>
+        
+        <div id="chat-container" class="chat-container" style="display: none;">
+            <!-- Existing chat interface -->
+        </div>
+    </div>
+
+    <script src="static/js/auth.js"></script>
+    <script src="static/js/main.js"></script>
+    <script>
+        // Initialize auth and chat
+        const authManager = new AuthManager();
+        const authForms = new AuthForms(authManager);
+        const chatApp = new ChatApp(authManager);
+    </script>
+</body>
+</html>
